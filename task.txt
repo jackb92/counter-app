@@ -1,0 +1,21 @@
+Task: 
+
+Using a TDD approach, create a counter application by delivering each requirement at a time. You can choose to use any JS framework or use vanilla JS. 
+
+Please only style the app if you have time at the end. 
+
+Requirements 
+	
+- Display the number 0 on the page 
+- Render two buttons on the page, one with the text content of “+” and the other “-” 
+- When the “+” button is pressed it should increment the number displayed in steps of 1 
+- When the “-” button is pressed it should decrement the number displayed in steps of 1 
+- The number displayed should not go above 10 	
+- The number displayed should not go below 0 	
+- Render two more buttons on screen, one with the text content of “+3” the other “-3” 
+- When the “+3” button is pressed it should increment the number displayed in steps of 3 	
+- When the “-3” button is pressed it should decrement the number displayed in steps of 3 
+- When pressing the +3 button if the action is going to make the number go above 10, it should display 10 	
+- When pressing the -3 button if the action is going to make the number go below 0, it should display 0 
+- Make the upper bound of 10 configurable by the user by an on-screen input 
+	
