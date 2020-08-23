@@ -1,8 +1,10 @@
+var upperBound = 10
+
 function incrementOne() {
     var value = document.getElementById("count")
     var number = parseInt(value.innerHTML)
 
-    if(number >= 10){
+    if(number >= upperBound){
         value.innerHTML = number
     }
     else {
@@ -28,7 +30,7 @@ function incrementThree() {
     var value = document.getElementById("count")
     var number = parseInt(value.innerHTML)
 
-    if(number >= 7){
+    if(number + 3 >= upperBound){
         value.innerHTML = "10"
     }
     else {
@@ -41,7 +43,7 @@ function decrementThree() {
     var value = document.getElementById("count")
     var number = parseInt(value.innerHTML)
 
-    if(number <= 3){
+    if(number -3 <= 0){
         value.innerHTML = "0"
     }
     else {
