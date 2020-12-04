@@ -1,3 +1,3 @@
-Cypress.Commands.add('countSetter', (a) => {
-    document.getElementById("count").innerHTML = a
+Cypress.Commands.add('countSetter', (count) => {
+    document.getElementById("count").innerHTML = count
 })

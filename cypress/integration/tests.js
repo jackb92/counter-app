@@ -21,6 +21,7 @@ describe('counter app tests', () => {
             cy.get('#count').then(($newCount) => {
                 const newStringCount = $newCount.text()
                 const newNumberCount = parseInt(newStringCount)
+                //convert to if not incremented (!)
                 if(newNumberCount === numberCount + 1){
                     console.log('count incremented by 1')
                 }
@@ -46,13 +47,13 @@ describe('counter app tests', () => {
         })
     })
 
-    it('should not exceed 10 by default when + button is pressed', () => {
+    it('should not be able to exceed 10 when + button is pressed', () => {
         cy.countSetter(10)
         cy.get(".plusOne").click()
         cy.get("#count").contains("10")
     })
 
-    it('should not go below 0 when - button is pressed', () => {
+    it('should not be able to go below 0 when - button is pressed', () => {
         cy.countSetter(0)
         cy.get(".minusOne").click()
         cy.get("#count").contains("0")
