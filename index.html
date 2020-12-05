@@ -4,13 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Counter App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="count">0</div>
-    <button onclick="incrementOne()" type="button" class="plusOne">+</button>
-    <button onclick="decrementOne()" type="button" class="minusOne">-</button>
-    <button onclick="incrementThree()" type="button" class="plusThree">+3</button>
-    <button onclick="decrementThree()" type="button" class="minusThree">-3</button>
+    <div class="container">
+        <div class="count-container">
+            <div id="count">0</div>
+        </div>
+        <div class="button-container">
+            <div class="top-row-buttons">
+                <button onclick="decrementOne()" type="button" class="minusOne">-</button>
+                <button onclick="incrementOne()" type="button" class="plusOne">+</button>
+            </div>
+            <div class="bottom-row-buttons">
+                <button onclick="decrementThree()" type="button" class="minusThree">-3</button>
+                <button onclick="incrementThree()" type="button" class="plusThree">+3</button>
+            </div>
+        </div>
+        <div class="message-container">
+            <div id="max-message">
+                Max count limit reached!
+            </div>
+            <div id="min-message">
+                Min count limit reached!
+            </div>
+        </div>
+    </div>
+
     <script src="counter.js"></script>
     <script src="cypress/support/commands.js"></script>
 </body>

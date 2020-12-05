@@ -1,53 +1,72 @@
-var upperBound = 10
+const upperBound = 10
+const lowerBound = 0
+const maxMessage = document.getElementById("max-message")
+const minMessage = document.getElementById("min-message")
 
 function incrementOne() {
-    var value = document.getElementById("count")
-    var number = parseInt(value.innerHTML)
+    let value = document.getElementById("count")
+    let number = parseInt(value.innerHTML)
 
     if(number >= upperBound){
         value.innerHTML = number
+        maxMessage.style.display = "block"
+        minMessage.style.display = "none"
     }
     else {
         number++
         value.innerHTML = number
+        maxMessage.style.display = "none"
+        minMessage.style.display = "none"
     }
 }
 
 function decrementOne() {
-    var value = document.getElementById("count")
-    var number = parseInt(value.innerHTML)
+    let value = document.getElementById("count")
+    let number = parseInt(value.innerHTML)
 
     if(number <= 0){
         value.innerHTML = number
+        minMessage.style.display = "block"
+        maxMessage.style.display = "none"
     }
     else {
         number--
         value.innerHTML = number
+        minMessage.style.display = "none"
+        maxMessage.style.display = "none"
     }
 }
 
 function incrementThree() {
-    var value = document.getElementById("count")
-    var number = parseInt(value.innerHTML)
+    let value = document.getElementById("count")
+    let number = parseInt(value.innerHTML)
 
     if(number + 3 >= upperBound){
         value.innerHTML = "10"
+        maxMessage.style.display = "block"
+        minMessage.style.display = "none"
     }
     else {
         number + 3
         value.innerHTML = number + 3
-    }  
+        maxMessage.style.display = "none"
+        minMessage.style.display = "none"
+    }
 }
 
 function decrementThree() {
-    var value = document.getElementById("count")
-    var number = parseInt(value.innerHTML)
+    let value = document.getElementById("count")
+    let number = parseInt(value.innerHTML)
 
     if(number -3 <= 0){
         value.innerHTML = "0"
+        minMessage.style.display = "block"
+        maxMessage.style.display = "none"
     }
     else {
         number + 3
         value.innerHTML = number - 3
-    }  
+        minMessage.style.display = "none"
+        maxMessage.style.display = "none"
+    } 
 }
