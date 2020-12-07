@@ -99,7 +99,7 @@ describe('counter app tests', () => {
         })
     })
 
-    it('should not exceed 10 by default when +3 button is pressed', () => {
+    it('should not exceed 10 when +3 button is pressed', () => {
         cy.countSetter(9)
         cy.get(".plusThree").click()
         cy.get("#count").contains("10")
@@ -112,6 +112,8 @@ describe('counter app tests', () => {
     })
 
     it('should not exceed customer upperbound when changed from default', () => {
-
+        throw new Error ('Add code')
     })
+
+    
 })
