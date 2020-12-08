@@ -4,7 +4,9 @@
   "description": "",
   "main": "counter.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress": "cypress open",
+    "headless": "cypress run"
   },
   "repository": {
     "type": "git",

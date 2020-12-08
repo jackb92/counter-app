@@ -115,5 +115,19 @@ describe('counter app tests', () => {
         throw new Error ('Add code')
     })
 
-    
+    it('should display max count messaging when user tries to increment past max count', () => {
+        cy.countSetter(10)
+        cy.get("#max-message").should('not.be.visible')
+        cy.get(".plusOne").click()
+        cy.get("#max-message").should('be.visible')
+            .contains("Max count limit reached!")
+    })
+
+    it('should display min count messaging when user tries to increment past min count', () => {
+        cy.countSetter(0)
+        cy.get("#min-message").should('not.be.visible')
+        cy.get(".minusOne").click()
+        cy.get("#min-message").should('be.visible')
+            .contains("Min count limit reached!")
+    })
 })
